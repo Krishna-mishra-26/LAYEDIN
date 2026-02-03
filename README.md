@@ -8,6 +8,31 @@
 
 LayedIn is a comprehensive talent marketplace that bridges the gap between **laid-off tech professionals** and **companies looking to hire exceptional talent**. Built with modern web technologies, it delivers a seamless experience for job seekers, recruiters, and hiring managers.
 
+<p align="center">
+  <img width="1920" height="900" alt="LayedIN-HomePage" src="https://github.com/user-attachments/assets/b3429f9a-3f46-4d5f-8232-d4dec0afdd51" />
+  <br>
+  <em>1. LayedIN – Home Page</em>
+</p>
+
+<p align="center">
+  <img width="1183" height="890" alt="LayedIN - Discover Talent" src="https://github.com/user-attachments/assets/e07e014a-49ab-4778-910d-3ce9f2d97f13" />
+  <br>
+  <em>2. Discover Talent</em>
+</p>
+
+<p align="center">
+  <img width="1310" height="1500" alt="LayedIN - Profile" src="https://github.com/user-attachments/assets/b674d6a8-f94d-4bb9-ae8a-5a9d55165236" />
+  <br>
+  <em>3. Each Profiles</em>
+</p>
+
+<p align="center">
+  <img width="1310" height="1000" alt="LayedIn - Offer Referral" src="https://github.com/user-attachments/assets/4b61ac9e-079b-4ba2-9dcd-b2a13abb80d4" />
+  <br>
+  <em>4. Offer Referral Page</em>
+</p>
+
+
 ### The Problem It Solves
 - **For Job Seekers**: Visibility gap after layoffs – hard to get noticed by recruiters
 - **For Recruiters**: Scattered talent pool – no centralized platform for laid-off professionals
