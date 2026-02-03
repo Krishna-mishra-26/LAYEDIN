@@ -1,0 +1,286 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.input-field {
+  padding-left: 2.2rem  !important;
+}
+
+
+svg * {
+  color: rgba(250, 214, 168, 0.753);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #000000;
+  min-height: 100vh;
+  color: #e5e5e5;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* Glass morphism effect */
+.glass {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.glass-dark {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* Gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient border */
+.gradient-border {
+  position: relative;
+  background: #0a0a0a;
+  border-radius: 16px;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Button hover effects */
+.btn-primary {
+  @apply bg-white text-black font-semibold py-3 px-6 rounded-lg 
+         transition-all duration-200 hover:bg-neutral-200
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-secondary {
+  @apply bg-neutral-900 text-neutral-200 font-semibold py-3 px-6 rounded-lg border border-neutral-800
+         transition-all duration-200 hover:bg-neutral-800 hover:border-neutral-700 hover:text-white
+         disabled:opacity-50 disabled:cursor-not-allowed;
+}
+
+.btn-ghost {
+  @apply text-neutral-400 font-medium py-2 px-4 rounded-lg
+         transition-all duration-200 hover:bg-neutral-900 hover:text-white;
+}
+
+/* Input styles - icons now at end, proper padding */
+.input-field {
+  @apply w-full bg-neutral-950 border border-neutral-800 rounded-lg px-4 py-3
+         text-white placeholder-neutral-500 
+         focus:outline-none focus:ring-1 focus:ring-neutral-600 focus:border-neutral-600
+         transition-all duration-200;
+}
+
+/* Month input calendar icon - make it white */
+input[type="month"].input-field::-webkit-calendar-picker-indicator {
+  filter: invert(1) brightness(1.2);
+  cursor: pointer;
+}
+
+input[type="month"].input-field {
+  color-scheme: dark;
+}
+
+/* Select/Dropdown styles */
+select.input-field {
+  @apply appearance-none cursor-pointer;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23737373' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+  background-position: right 0.75rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+}
+
+select.input-field option {
+  @apply bg-neutral-950 text-white py-2;
+}
+
+/* Card styles */
+.card {
+  @apply bg-neutral-950 border border-neutral-800 rounded-xl p-6
+         transition-all duration-200;
+}
+
+.card-hover {
+  @apply card hover:border-neutral-700 hover:bg-neutral-900;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-3 py-1 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply badge bg-neutral-800 text-neutral-200 border border-neutral-700;
+}
+
+.badge-secondary {
+  @apply badge bg-neutral-900 text-neutral-400 border border-neutral-800;
+}
+
+.badge-success {
+  @apply badge bg-emerald-950 text-emerald-400 border border-emerald-900;
+}
+
+.badge-warning {
+  @apply badge bg-neutral-900 text-neutral-300 border border-neutral-800;
+}
+
+/* Skeleton loading */
+.skeleton {
+  @apply bg-neutral-900 rounded animate-pulse;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Hero gradient orbs - subtle neutral accents */
+.hero-gradient-1 {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(38, 38, 38, 0.5) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+.hero-gradient-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(38, 38, 38, 0.3) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+
+/* Input with icon - proper spacing */
+.input-with-icon {
+  @apply relative;
+}
+
+.input-with-icon .input-icon {
+  @apply absolute right-4 top-1/2 transform -translate-y-1/2 text-neutral-500 pointer-events-none;
+}
+
+.input-with-icon input,
+.input-with-icon select {
+  @apply pr-12;
+}
+
+/* Form label styling */
+.form-label {
+  @apply block text-sm font-medium text-neutral-400 mb-2;
+}
+
+/* Section divider */
+.section-divider {
+  @apply border-t border-neutral-800 my-6;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+  /* Reduce card padding on mobile */
+  .card {
+    @apply p-4;
+  }
+  
+  /* Make buttons more touch-friendly */
+  .btn-primary,
+  .btn-secondary {
+    @apply min-h-[44px];
+  }
+  
+  /* Improve input touch targets */
+  .input-field {
+    @apply py-3 text-base;
+  }
+  
+  /* Adjust badges for mobile */
+  .badge {
+    @apply px-2 py-0.5 text-xs;
+  }
+  
+  /* Reduce hero gradient sizes on mobile */
+  .hero-gradient-1,
+  .hero-gradient-2 {
+    width: 300px;
+    height: 300px;
+  }
+}
+
+/* Ensure touch-friendly scroll on mobile */
+@supports (-webkit-touch-callout: none) {
+  html, body {
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* Fix for iOS input zoom */
+@media (max-width: 640px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  textarea,
+  select {
+    font-size: 16px !important;
+  }
+}

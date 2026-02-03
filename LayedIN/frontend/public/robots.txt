@@ -1,0 +1,17 @@
+# LayedIn Robots.txt
+# Allow all search engine crawlers
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://layedin.com/sitemap.xml
+
+# Disallow admin/private paths
+Disallow: /dashboard
+Disallow: /messages
+Disallow: /edit-profile
+Disallow: /create-profile
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
